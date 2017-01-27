@@ -1,40 +1,47 @@
 body {
-  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
 }
 
-header, footer {
-  background-color: #A3FFC6;
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: blue;
+  height: 10%;
+  color: white;
 }
 
-a {
-  color: #00B7FF;
+.card-img-top {
+  width: 20em;
 }
 
-.golf-logo {
-  padding-left: .5em;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
 }
 
+.card {
+  margin-right: 3em;
+  margin-left: 3em;
+}
 
-md-grid-list {
-  margin: 8px; }
+.holder {
+  display: flex;
+  flex-direction: row;
+}
 
-.black {
-  background: black; }
+.form-holder {
+  padding-top: 2em;
+}
 
-.green {
-  background: #b9f6ca; }
+.btn-info {
+  margin-top: 2em;
+}
 
-.yellow {
-  background: #ffff8d; }
-
-.blue {
-  background: #84ffff; }
-
-.purple {
-  background: #b388ff; }
-
-.red {
-  background: #ff8a80; }
-
-md-grid-tile {
-  transition: all 400ms ease-out 50ms; }
+h1 {
+  padding-left: 1em;
+}
