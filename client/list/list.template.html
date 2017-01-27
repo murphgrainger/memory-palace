@@ -1,6 +1,9 @@
 <div class="row holder">
     <div class="col-md-3 form-holder">
         <div class="col-md-12">
+          <button type="button" class="btn btn-info btn-lg" ng-click="showName = !showName">
+              Play Game
+          </button>
             <form name="newPostForm" ng-submit="$ctrl.postItem($ctrl.item)" novalidate>
                 <div class="form-group" ng-class="{'has-error': newPostForm.title.$touched && newPostForm.title.$invalid, 'has-success': newPostForm.title.$touched && !newPostForm.title.$invalid}">
                     <label for="title">Item to Remember</label>
@@ -16,20 +19,20 @@
                     </button>
                 </div>
             </form>
-            <p ng-repeat="item in $ctrl.items">
+            <p ng-repeat="item in $ctrl.items" ng-show="!showName">
                 {{item.name}}
             </p>
-            <button type="button" class="btn btn-info" ng-click="showName = !showName">
-                Play Game
-            </button>
+
         </div>
     </div>
-    <div class="col-md-9 cards" ng-repeat="item in $ctrl.items">
-        <div class="card" style="width: 20rem;">
+    <div class="container card-row">
+    <div class="col-md-9 cards">
+        <div class="card" ng-repeat="item in $ctrl.items">
             <img class="card-img-top" ng-src="{{item.image_url}}" alt="Card image cap">
             <div class="card-block">
                 <h4 class="card-title" ng-show="!showName">{{item.name}}</h4>
             </div>
         </div>
     </div>
+  </div>
 </div>
