@@ -83,6 +83,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 6px solid #ECE3DA;
 
 }
 
@@ -107,8 +108,6 @@ form {
   flex-direction: column;
   justify-content: center;
 }
-
-
 
 h1 {
   padding-left: 1em;
