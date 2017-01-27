@@ -4,7 +4,7 @@ module.exports = {
 
     development: {
         client: 'pg',
-        connection: 'postgres://localhost/memorypalace'
+        connection: 'postgres://localhost/memory-palace'
     },
     production: {
         client: 'pg',
