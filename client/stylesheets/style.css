@@ -21,6 +21,7 @@ header {
 .cards {
   display: flex;
   flex-wrap: wrap;
+  padding: 2em;
 }
 
 .card {
@@ -33,10 +34,14 @@ header {
   flex-direction: row;
 }
 
-.col-md-5 {
-  width: 45em;
-}
-
 .form-holder {
   padding-top: 2em;
+}
+
+.btn-info {
+  margin-top: 2em;
+}
+
+h1 {
+  padding-left: 1em;
 }

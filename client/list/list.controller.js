@@ -8,9 +8,18 @@
     function ListController(cardService) {
         const vm = this;
         vm.$onInit = function() {
-            cardService.getCourses().then(function(courses) {
-                vm.courses = courses;
-                console.log(courses);
+
+        }
+
+        vm.postItem = function(data) {
+            vm.item = {
+                title: data.title
+            }
+            cardService.addPost(vm.item).then(function(item) {
+                delete vm.item
+                postService.getPost().then(function(item) {
+                    vm.items = item
+                })
             })
         }
     }

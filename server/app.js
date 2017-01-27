@@ -3,7 +3,6 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-const index = require('./routes/index')
 const users = require('./routes/users');
 const knex = require('./db/knex');
 
@@ -19,9 +18,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/../client')))
 app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 
-app.use('/api/v1', index)
-app.use('/api/v1', users)
-
+app.use('/api/items', require('./routes/items'))
 app.use('*', function(req, res) {
     res.sendFile('index.html', {
         root: path.join(__dirname, '/../client')
