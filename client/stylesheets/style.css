@@ -26,6 +26,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 3em;
+  width: 100%;
 
 }
 
@@ -44,6 +45,22 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
 }*/
+
+.card {
+  text-align: center;
+  margin-right: 1em;
+  margin: top: 1em;
+}
+
+.card-title {
+  background: #bc6c1c;
+  margin: 0;
+  height: 2em;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .holder {
   display: flex;
