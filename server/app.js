@@ -7,6 +7,7 @@ const users = require('./routes/users');
 const knex = require('./db/knex');
 
 
+
 var app = express();
 
 
@@ -18,7 +19,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/../client')))
 app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 
-app.use('/api/items', require('./routes/items'))
+app.use('/users', users)
+
 app.use('*', function(req, res) {
     res.sendFile('index.html', {
         root: path.join(__dirname, '/../client')

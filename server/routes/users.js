@@ -1,9 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
+console.log(true);
+
+
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.post('/', function(req, res, next) {
+    console.log(req.body);
+    queries.addItem(req.body).then(function(item) {
+        res.json(item)
+    })
 });
 
 module.exports = router;

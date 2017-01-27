@@ -4,7 +4,11 @@
             <form name="newPostForm" ng-submit="$ctrl.postItem($ctrl.item)" novalidate>
                 <div class="form-group" ng-class="{'has-error': newPostForm.title.$touched && newPostForm.title.$invalid, 'has-success': newPostForm.title.$touched && !newPostForm.title.$invalid}">
                     <label for="title">Item to Remember</label>
-                    <input id="title" type="text" class="form-control" name="title" ng-model="$ctrl.item.title" ng-minlength=3 ng-maxlength=20 required>
+                    <input id="title" type="text" class="form-control" name="title" ng-model="$ctrl.item.name" ng-minlength=3 ng-maxlength=20 required>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input id="image" type="url" class="form-control" name="image" ng-model="$ctrl.item.image_url" ng-minlength=3 required>
                 </div>
                 <div class="form-group">
                     <button type="submit" ng-disabled="newPostForm.$invalid" class="btn btn-primary">
@@ -13,18 +17,18 @@
                 </div>
             </form>
             <p ng-repeat="item in $ctrl.items">
-                {{item.title}}
+                {{item.name}}
             </p>
-            <button type="button" class="btn btn-info">
-                <a ui-sref="playground">Play Game</a>
+            <button type="button" class="btn btn-info" ng-click="showName = !showName">
+                Play Game
             </button>
         </div>
     </div>
     <div class="col-md-9 cards" ng-repeat="item in $ctrl.items">
         <div class="card" style="width: 20rem;">
-            <img class="card-img-top" src="http://writm.com/wp-content/uploads/2016/08/Cat-hd-wallpapers.jpg" alt="Card image cap">
+            <img class="card-img-top" ng-src="{{item.image_url}}" alt="Card image cap">
             <div class="card-block">
-                <h4 class="card-title">Card title</h4>
+                <h4 class="card-title" ng-show="!showName">{{item.name}}</h4>
             </div>
         </div>
     </div>

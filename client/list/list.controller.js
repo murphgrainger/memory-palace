@@ -7,18 +7,15 @@
 
     function ListController(cardService) {
         const vm = this;
+
         vm.$onInit = function() {
-
+            vm.items = []
         }
 
-        vm.postItem = function(data) {
-            console.log(data);
-            vm.item = {
-                title: data.title
-            }
-            cardService.getItems(vm.item).then(function(item) {
-                delete vm.item
-            })
+        vm.postItem = function() {
+            vm.items.push(vm.item)
+            delete vm.item
         }
+
     }
-})();
+})();;
