@@ -1,0 +1,40 @@
+body {
+  min-height: 30vh;
+}
+
+header, footer {
+  background-color: #A3FFC6;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.golf-logo {
+  padding-left: .5em;
+}
+
+
+md-grid-list {
+  margin: 8px; }
+
+.black {
+  background: black; }
+
+.green {
+  background: #b9f6ca; }
+
+.yellow {
+  background: #ffff8d; }
+
+.blue {
+  background: #84ffff; }
+
+.purple {
+  background: #b388ff; }
+
+.red {
+  background: #ff8a80; }
+
+md-grid-tile {
+  transition: all 400ms ease-out 50ms; }
