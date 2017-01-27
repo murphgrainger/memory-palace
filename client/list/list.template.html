@@ -12,6 +12,9 @@
                     </button>
                 </div>
             </form>
+            <p ng-repeat="item in $ctrl.items">
+                {{item.title}}
+            </p>
             <button type="button" class="btn btn-info">
                 <a ui-sref="playground">Play Game</a>
             </button>

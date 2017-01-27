@@ -12,14 +12,12 @@
         }
 
         vm.postItem = function(data) {
+            console.log(data);
             vm.item = {
                 title: data.title
             }
-            cardService.addPost(vm.item).then(function(item) {
+            cardService.getItems(vm.item).then(function(item) {
                 delete vm.item
-                postService.getPost().then(function(item) {
-                    vm.items = item
-                })
             })
         }
     }
